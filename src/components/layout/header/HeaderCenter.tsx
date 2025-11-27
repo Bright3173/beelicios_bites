@@ -121,7 +121,7 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
                                     {/* <!-- Header Logo Start --> */}
                                     <div className="header-logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo/logo.png" alt="logo" className="light" />
+                                            <img src="/assets/img/logo/beelicious.jpg" alt="logo" className="light" />
                                             <img src="/assets/img/logo/logo-dark.png" alt="logo" className="dark" />
                                         </Link>
                                     </div>
