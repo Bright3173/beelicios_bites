@@ -117,17 +117,28 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
 
   return (
     <>
-      <div className="bottom-header">
+      <div className="bottom-header " style={{ backgroundColor: "#1b1b1b" }}>
         <div className="container">
           <Row>
             <div className="col-12">
               <div className="inner-bottom-header">
                 <div className="cols bb-logo-detail">
                   {/* <!-- Header Logo Start --> */}
+
+                  <Link
+                    onClick={openMobileManu}
+                    href="#"
+                    className="bb-toggle-menu"
+                  >
+                    <div className="header-icon">
+                      <i className="ri-menu-3-fill"></i>
+                    </div>
+                  </Link>
+
                   <div className="header-logo">
                     <Link href="/">
                       <img
-                        src="/assets/img/logo/logobeelicious.jpg"
+                        src="/assets/img/logo/delicioustaste.jpg"
                         alt="logo"
                         className="light"
                       />
@@ -323,15 +334,15 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
                           <span className="bb-btn-stitle">Cart</span>
                         </div>
                       </Link>
-                      <Link
-                        onClick={openMobileManu}
-                        href="#"
-                        className="bb-toggle-menu"
-                      >
-                        <div className="header-icon">
-                          <i className="ri-menu-3-fill"></i>
-                        </div>
-                      </Link>
+
+                      <i
+                        className="ri-search-line"
+                        style={{
+                          fontSize: "20px",
+                          color: "#ffda47",
+                          marginLeft: "17px",
+                        }}
+                      ></i>
                     </div>
                   </div>
                 </div>

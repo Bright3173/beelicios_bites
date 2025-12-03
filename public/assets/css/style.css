@@ -1014,7 +1014,7 @@ a.back-to-top svg path {
   height: 30px;
 }
 .bb-header-btn .header-icon svg path {
-  fill: #7b3f00;
+  fill: #ffda47;
 }
 .bb-header-btn .bb-btn-stitle {
   -webkit-transition: all 0.3s ease-in-out;
@@ -1029,7 +1029,7 @@ a.back-to-top svg path {
 }
 .bb-toggle-menu .header-icon i {
   font-size: 22px;
-  color: #7b3f00;
+  color: #ffda47 !important;
 }
 
 .header-search {
@@ -1161,7 +1161,7 @@ a.back-to-top svg path {
   width: 30px;
 }
 .bottom-header .inner-bottom-header .bb-sidebar-toggle svg path {
-  fill: #7b3f00;
+  fill: #ffda47;
 }
 .bottom-header .inner-bottom-header .bb-sidebar-toggle {
   display: none;
@@ -1175,7 +1175,7 @@ a.back-to-top svg path {
   align-items: center;
 }
 .bottom-header .inner-bottom-header .header-logo img {
-  width: 125px;
+  width: 75px;
 }
 .bottom-header .inner-bottom-header .header-logo .dark {
   display: none;
@@ -2113,13 +2113,13 @@ a.back-to-top svg path {
   }
   .bb-category-toggle {
     margin-left: 20px;
-    border: 1px solid #eee;
     width: 40px;
     height: 40px;
     border-radius: 15px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background-color: #4a4a4a;
   }
   .bb-category-toggle svg {
     width: 22px;
@@ -2170,10 +2170,16 @@ a.back-to-top svg path {
     display: none;
   }
   .bb-toggle-menu {
-    margin-left: 20px;
+    margin-left: 9px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #4a4a4a;
+    justify-content: center;
+    align-items: center;
   }
   .bb-main-menu {
     display: none !important;
