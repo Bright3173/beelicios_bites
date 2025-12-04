@@ -18,6 +18,7 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { searchTerm } = useSelector((state: RootState) => state.filter);
   const [searchInput, setSearchInput] = useState(searchTerm || "");
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,6 +36,30 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
       dispatch(login(loginUser));
     }
   }, [dispatch]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const searchEl = document.getElementById("mobile-search-input");
+      const iconEl = document.getElementById("mobile-search-icon");
+      if (
+        searchEl &&
+        iconEl &&
+        !searchEl.contains(event.target as Node) &&
+        !iconEl.contains(event.target as Node)
+      ) {
+        setMobileSearchOpen(false);
+      }
+    };
+    if (mobileSearchOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [mobileSearchOpen]);
 
   const handleMenuClick = (info: any) => {
     setSelectedItem(`${info.key}`);
@@ -117,7 +142,7 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
 
   return (
     <>
-      <div className="bottom-header " style={{ backgroundColor: "#1b1b1b" }}>
+      <div className="bottom-header " style={{ backgroundColor: "#000" }}>
         <div className="container">
           <Row>
             <div className="col-12">
@@ -167,38 +192,45 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
                 </div>
                 <div className="cols">
                   <div className="header-search">
-                    <form
-                      onSubmit={handleSubmit}
-                      className="bb-btn-group-form"
-                      action="#"
-                    >
-                      <Dropdown
-                        trigger={["click"]}
-                        overlay={menu}
-                        animation="slide-up"
-                        onVisibleChange={handleVisibleChange}
-                        visible={visible}
+                    {mobileSearchOpen && (
+                      <div
+                        id="mobile-search-input"
+                        className="mobile-search-container"
                       >
-                        <div className="inner-select location-dark">
-                          <div className="custom-select">
-                            {selectedItem}
-                            <i
-                              style={{ fontSize: "30px" }}
-                              className="ri-arrow-drop-down-line"
-                            ></i>
-                          </div>
-                        </div>
-                      </Dropdown>
-                      <input
-                        onChange={handleSearch}
-                        className="form-control bb-search-bar"
-                        placeholder="Search products..."
-                        type="text"
-                      />
-                      <button className="submit" type="submit">
-                        <i className="ri-search-line"></i>
-                      </button>
-                    </form>
+                        <form
+                          onSubmit={handleSubmit}
+                          className="bb-btn-group-form"
+                          action="#"
+                        >
+                          <Dropdown
+                            trigger={["click"]}
+                            overlay={menu}
+                            animation="slide-up"
+                            onVisibleChange={handleVisibleChange}
+                            visible={visible}
+                          >
+                            <div className="inner-select location-dark">
+                              <div className="custom-select">
+                                {selectedItem}
+                                <i
+                                  style={{ fontSize: "30px" }}
+                                  className="ri-arrow-drop-down-line"
+                                ></i>
+                              </div>
+                            </div>
+                          </Dropdown>
+                          <input
+                            onChange={handleSearch}
+                            className="form-control bb-search-bar"
+                            placeholder="Search products..."
+                            type="text"
+                          />
+                          <button className="submit" type="submit">
+                            <i className="ri-search-line"></i>
+                          </button>
+                        </form>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="cols bb-icons">
@@ -336,14 +368,39 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
                       </Link>
 
                       <i
-                        className="ri-search-line"
+                        id="mobile-search-icon"
+                        className="ri-search-line mobile-search-toggle"
                         style={{
                           fontSize: "20px",
                           color: "#ffda47",
                           marginLeft: "17px",
                         }}
+                        onClick={() => setMobileSearchOpen((prev) => !prev)}
                       ></i>
                     </div>
+                    {/* {mobileSearchOpen && (
+                      <div
+                        id="mobile-search-input"
+                        className={`mobile-search-container ${
+                          mobileSearchOpen ? "show" : "hide"
+                        }`}
+                      >
+                        <form
+                          onSubmit={handleSubmit}
+                          className="bb-btn-group-form"
+                          action="#"
+                        >
+                          <input
+                            onChange={handleSearch}
+                            className="form-control bb-search-bar"
+                            placeholder="Search products..."
+                            type="text"
+                          />
+
+                          <i className="ri-search-line"></i>
+                        </form>
+                      </div>
+                    )} */}
                   </div>
                 </div>
               </div>
