@@ -2161,6 +2161,9 @@ a.back-to-top svg path {
   }
   .bottom-header .inner-bottom-header .header-logo img {
     width: 115px;
+    margin-top: -9px;
+    margin-bottom: 7px;
+    margin: left 19px;
   }
   .bottom-header .inner-bottom-header .header-search {
     width: 100%;
