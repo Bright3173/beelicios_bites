@@ -4247,11 +4247,18 @@ button.btn-close.qty_close {
 /* Layouts ( Import Layouts ) */
 /* Hero */
 .section-hero {
-  padding: 50px 0;
+  padding: 10px 0;
   position: relative;
-  background-color: #f8f8fb;
+  background: linear-gradient(
+    180deg,
+    #1b1b1b 0%,
+    #3a3a3a 50%,
+    #777777
+  ) !important;
+  box-shadow: 0px -20px 40px rgba(0, 0, 0, 0.6) inset;
   overflow: hidden;
 }
+
 .section-hero:after {
   content: "";
   width: 800px;

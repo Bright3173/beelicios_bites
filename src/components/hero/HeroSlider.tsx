@@ -88,7 +88,7 @@ const HeroSlider = () => {
                       </Col>
                       <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
                         <HeroImage
-                          src="/assets/img/hero/hero111.jpg"
+                          src="/assets/img/hero/sweetcake.JPG"
                           alt="hero"
                         />
                       </Col>
@@ -113,7 +113,7 @@ const HeroSlider = () => {
                       </Col>
                       <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
                         <HeroImage
-                          src="/assets/img/hero/hero222.jpg"
+                          src="/assets/img/hero/pancake.JPG"
                           alt="hero"
                         />
                       </Col>
