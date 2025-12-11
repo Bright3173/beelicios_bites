@@ -2266,7 +2266,7 @@ a.back-to-top svg path {
 
   .mobile-search-container {
     position: absolute;
-    top: 60px; /* match navbar bottom */
+    top: 60px; /* mat ch navbar bottom */
     left: 0;
     right: 0;
     background-color: #1b1b1b;
