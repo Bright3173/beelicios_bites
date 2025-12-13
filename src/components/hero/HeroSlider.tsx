@@ -74,8 +74,8 @@ const HeroSlider = () => {
                       <Col lg={6} className="col-12 order-lg-1 order-2 mb-24">
                         <div className="hero-contact">
                           <p>Flat 30% Off</p>
-                          <h1>
-                            The <span>Perfect Burst</span>
+                          <h1 style={{ color: "#f1f1f1" }}>
+                            The Perfect Burst
                             <br></br> Of Fresh Cake Bread.
                           </h1>
                           <Link
@@ -88,7 +88,7 @@ const HeroSlider = () => {
                       </Col>
                       <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
                         <HeroImage
-                          src="/assets/img/hero/sweetcake.JPG"
+                          src="/assets/img/hero/best-logo1.jpg"
                           alt="hero"
                         />
                       </Col>
@@ -99,8 +99,8 @@ const HeroSlider = () => {
                       <Col lg={6} className="col-12 order-lg-1 order-2 mb-24">
                         <div className="hero-contact">
                           <p>Flat 20% Off</p>
-                          <h2>
-                            Dicover <span>Healthy</span>
+                          <h2 style={{ color: "#f1f1f1" }}>
+                            Dicover Healthy
                             <br></br> Mixture of Banana Blend
                           </h2>
                           <Link
@@ -113,7 +113,7 @@ const HeroSlider = () => {
                       </Col>
                       <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
                         <HeroImage
-                          src="/assets/img/hero/pancake.JPG"
+                          src="/assets/img/hero/best-hero2.jpg"
                           alt="hero"
                         />
                       </Col>
