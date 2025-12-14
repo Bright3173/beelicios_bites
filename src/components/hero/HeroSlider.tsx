@@ -68,7 +68,7 @@ const HeroSlider = () => {
                           <div className="hero-blur-bg"></div>
 
                           <h2>
-                            Dicover Healthy
+                            Discover Delicious
                             <br></br> Mixture of Banana Blend
                           </h2>
                           <Link
