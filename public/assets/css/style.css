@@ -4630,15 +4630,36 @@ button.btn-close.qty_close {
 }
 @media only screen and (max-width: 767px) {
   .section-hero {
-    background-image: url("/assets/img/hero/sweetcake.JPG") !important;
-    background-size: cover;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/img/hero/sweetcake.JPG");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: scale(1);
+    animation: heroBgZoom 20s ease-in-out infinite alternate;
+    z-index: 1;
+  }
+
+  .section-hero > * {
     position: relative;
+    z-index: 2;
+  }
+
+  @keyframes heroBgZoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.06);
+    }
   }
 
   .hero-contact h1,
@@ -4653,15 +4674,6 @@ button.btn-close.qty_close {
 @media only screen and (max-width: 575px) {
   .section-hero .bb-social-follow {
     display: none;
-  }
-
-  .section-hero {
-    background-image: url("/assets/img/hero/best-logo1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 70vh;
-    position: relative;
   }
 
   .section-hero .bb-scroll-Page {

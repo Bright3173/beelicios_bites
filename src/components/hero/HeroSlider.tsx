@@ -65,7 +65,9 @@ const HeroSlider = () => {
                     <Row className="mb-minus-24">
                       <Col lg={6} className="col-12 order-lg-1 order-2 mb-24">
                         <div className="hero-contact">
-                          <h2 style={{ color: "#f1f1f1" }}>
+                          <div className="hero-blur-bg"></div>
+
+                          <h2>
                             Dicover Healthy
                             <br></br> Mixture of Banana Blend
                           </h2>
