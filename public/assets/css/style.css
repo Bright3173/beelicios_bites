@@ -216,7 +216,8 @@ body {
   letter-spacing: 0.02rem;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: '#f1f1f1'
+  background-color: '#f1f1f1';
+
 }
 
 ::-moz-selection {
@@ -4634,7 +4635,7 @@ button.btn-close.qty_close {
   @media (max-width: 767px) {
     .section-hero {
       position: relative;
-      height: 75vh;
+      height: 55vh;
       overflow-x: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       display: flex;
