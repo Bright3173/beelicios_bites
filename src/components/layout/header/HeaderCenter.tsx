@@ -133,9 +133,9 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
       onClick={handleMenuClick}
     >
       <MenuItem key="all">All</MenuItem>
-      <MenuItem key="Chocolate">Chocolate</MenuItem>
-      <MenuItem key="Fruits">Fruits</MenuItem>
-      <MenuItem key="Nuts">Nuts</MenuItem>
+      <MenuItem key="Chocolate">Banana</MenuItem>
+      <MenuItem key="Fruits">Chocolaty</MenuItem>
+      <MenuItem key="Nuts">Vanilla</MenuItem>
       <MenuItem key="Others">Others</MenuItem>
     </Menu>
   );
@@ -168,7 +168,7 @@ const HeaderCenter = ({ wishlistItem, cartSlice }: any) => {
                         className="light"
                       />
                       <img
-                        src="/assets/img/logo/logo-dark.png"
+                        src="/assets/img/logo/delicioustaste.jpg"
                         alt="logo"
                         className="dark"
                       />

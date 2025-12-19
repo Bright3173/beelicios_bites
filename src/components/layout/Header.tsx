@@ -5,7 +5,7 @@ import HeaderCenter from './header/HeaderCenter'
 import HeaderBottom from './header/HeaderBottom'
 import { useSelector } from 'react-redux'
 import { RootState } from '@/store'
-import NewsletterModal from '../modal/NewsletterModal'
+
 
 const Header = () => {
   const wishlistItem = useSelector((state: RootState) => state.wishlist?.wishlist);
