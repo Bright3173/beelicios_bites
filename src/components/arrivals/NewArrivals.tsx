@@ -11,16 +11,16 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const Categories: any = [
     {
-      groupname: "Snacks",
-      categoryName: ["Snacks", "Juice", "Chips", "Spices", "Sauces"],
+      groupname: "Banana",
+      categoryName: ["Nut", "Epicurious", "Buttermilk", "Walnut"],
     },
     {
-      groupname: "Fruit",
-      categoryName: ["Fruit"],
+      groupname: "Chocolaty",
+      categoryName: ["Ultimate ", "Chocolate Chip", "Dark Chocolate"],
     },
     {
-      groupname: "Vegetable",
-      categoryName: ["Vegetable", "Tuber Root", "Leaves"],
+      groupname: "Vanilla",
+      categoryName: ["Classic", "Honey", "Vanilla Brown", "Brown Butter"],
     },
   ];
 
