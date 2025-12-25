@@ -8,41 +8,14 @@ import {
   Parallax,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import NewsletterModal from "../modal/NewsletterModal";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import ScrollPage from "../scroll-page/ScrollPage";
-import HeroImage from "./HeroImage";
 
 const HeroSlider = () => {
   return (
     <>
-      <NewsletterModal />
       <section className="section-hero margin-b-50">
-        <div className="bb-social-follow">
-          <ul className="inner-links">
-            <li>
-              <a onClick={(e) => e.preventDefault()} href="#">
-                Fb
-              </a>
-            </li>
-            <li>
-              <a onClick={(e) => e.preventDefault()} href="#">
-                Li
-              </a>
-            </li>
-            <li>
-              <a onClick={(e) => e.preventDefault()} href="#">
-                Dr
-              </a>
-            </li>
-            <li>
-              <a onClick={(e) => e.preventDefault()} href="#">
-                In
-              </a>
-            </li>
-          </ul>
-        </div>
         <div className="container">
           <Row>
             <div className="col-12">
@@ -73,9 +46,9 @@ const HeroSlider = () => {
                     <Row className="mb-minus-24">
                       <Col lg={6} className="col-12 order-lg-1 order-2 mb-24">
                         <div className="hero-contact">
-                          <p>Flat 30% Off</p>
+                          <div className="hero-blur-bg"></div>
                           <h1>
-                            The <span>Perfect Burst</span>
+                            The Perfect Burst
                             <br></br> Of Fresh Cake Bread.
                           </h1>
                           <Link
@@ -86,21 +59,16 @@ const HeroSlider = () => {
                           </Link>
                         </div>
                       </Col>
-                      <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
-                        <HeroImage
-                          src="/assets/img/hero/sweetcake.JPG"
-                          alt="hero"
-                        />
-                      </Col>
                     </Row>
                   </SwiperSlide>
                   <SwiperSlide className="swiper-slide slide-2">
                     <Row className="mb-minus-24">
                       <Col lg={6} className="col-12 order-lg-1 order-2 mb-24">
                         <div className="hero-contact">
-                          <p>Flat 20% Off</p>
+                          <div className="hero-blur-bg"></div>
+
                           <h2>
-                            Dicover <span>Healthy</span>
+                            Discover Delicious
                             <br></br> Mixture of Banana Blend
                           </h2>
                           <Link
@@ -110,12 +78,6 @@ const HeroSlider = () => {
                             Order Now
                           </Link>
                         </div>
-                      </Col>
-                      <Col lg={6} className="col-12 order-lg-2 order-1 mb-24">
-                        <HeroImage
-                          src="/assets/img/hero/pancake.JPG"
-                          alt="hero"
-                        />
                       </Col>
                     </Row>
                   </SwiperSlide>

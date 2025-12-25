@@ -62,6 +62,7 @@ Copyright 2025
   Fonts Family & Style CSS
 ---------------------------------------------------*/
 /*--  Poppins font  --*/
+
 @font-face {
   font-family: "Poppins, sans-serif";
   src: url("../fonts/poppins/Poppins-Thin.ttf") format("truetype");
@@ -215,6 +216,8 @@ body {
   letter-spacing: 0.02rem;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: '#f1f1f1';
+
 }
 
 ::-moz-selection {
@@ -3833,7 +3836,7 @@ button.btn-close.qty_close {
 .bb-tools-sidebar .bb-tools-sidebar-toggle {
   position: absolute;
   top: 45%;
-  right: 302px;
+  right: 315px;
   width: 40px;
   height: 40px;
   background-color: #ffa500;
@@ -4247,14 +4250,8 @@ button.btn-close.qty_close {
 /* Layouts ( Import Layouts ) */
 /* Hero */
 .section-hero {
-  padding: 10px 0;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    #1b1b1b 0%,
-    #3a3a3a 50%,
-    #777777
-  ) !important;
+  background: linear-gradient(180deg, #1b1b1b 0%, #3a3a3a 50%, #777777);
   box-shadow: 0px -20px 40px rgba(0, 0, 0, 0.6) inset;
   overflow: hidden;
 }
@@ -4359,6 +4356,8 @@ button.btn-close.qty_close {
 
 .hero-contact {
   height: 100%;
+  width: 100%;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4368,7 +4367,7 @@ button.btn-close.qty_close {
   flex-direction: column;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -4412,7 +4411,7 @@ button.btn-close.qty_close {
 .hero-contact h2 {
   margin-bottom: 20px;
   font-size: 50px;
-  color: #ffa500;
+  color: #f1f1f1;
   font-weight: 700;
 }
 .hero-contact h1 span,
@@ -4428,7 +4427,7 @@ button.btn-close.qty_close {
   position: absolute;
   top: -40px;
   right: -40px;
-  background-image: url("../img/hero/shape-1.png");
+  /* background-image: url("../img/hero/shape-1.png"); */
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -4471,13 +4470,17 @@ button.btn-close.qty_close {
 }
 
 .hero-image {
-  padding-right: 50px;
+  width: 100%; /* full width of its parent */
+  height: 70%; /* takes 70% of vertical space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 .hero-image img {
-  width: 100%;
-  padding: 0 0 50px 0;
-  opacity: 0;
+  width: 100%; /* stretch full width */
+  height: 100%; /* fill height */
+  object-fit: contain;
 }
 .hero-image svg {
   width: 115%;
@@ -4573,9 +4576,9 @@ button.btn-close.qty_close {
   }
 }
 @media only screen and (max-width: 1199px) {
-  .hero-image svg {
+  /* .hero-image svg {
     width: 125%;
-  }
+  } */
   .hero-contact p {
     margin-bottom: 10px;
     font-size: 16px;
@@ -4629,6 +4632,37 @@ button.btn-close.qty_close {
   }
 }
 @media only screen and (max-width: 767px) {
+  @media (max-width: 767px) {
+    .section-hero {
+      position: relative;
+      height: 55vh;
+      overflow-x: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      overflow-x: hidden;
+      background-image: url("/assets/img/hero/Best-hero4.jpg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      transform: scale(1);
+
+      z-index: 1;
+    }
+
+    .section-hero > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
   .hero-contact h1,
   .hero-contact h2 {
     font-size: 40px;
@@ -4642,11 +4676,12 @@ button.btn-close.qty_close {
   .section-hero .bb-social-follow {
     display: none;
   }
+
   .section-hero .bb-scroll-Page {
     display: none;
   }
   .hero-image {
-    padding: 0 30px;
+    padding: 0 12px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4662,10 +4697,14 @@ button.btn-close.qty_close {
   }
   .hero-contact {
     text-align: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: rgba(85, 85, 85, 0.5);
+    height: 150px;
   }
+
   .hero-contact h1,
   .hero-contact h2 {
     font-size: 35px;
@@ -4680,13 +4719,11 @@ button.btn-close.qty_close {
     font-size: 30px;
   }
   .hero-image {
-    padding: 0;
+    width: 510px;
+    height: 330px;
   }
   .hero-image svg {
     display: none;
-  }
-  .hero-image img {
-    padding: 0 0 15px 0;
   }
 }
 @media only screen and (max-width: 360px) {
