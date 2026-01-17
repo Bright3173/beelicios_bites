@@ -73,7 +73,7 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
                     </p>
                   </div>
 
-                  <TabList className="bb-pro-tab">
+                  <TabList className="bb-pro-tab mb-3">
                     <ul className="bb-pro-tab-nav nav">
                       {["All", "Banana", "Chocolaty", "Vanilla"].map(
                         (tab, idx) => (
@@ -117,7 +117,7 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
                         triggerOnce
                         direction="up"
                         duration={1000}
-                        className="col-6 col-lg-3 m-3 bb-product-box"
+                        className="col-6 col-lg-3 mb-4 bb-product-box"
                       >
                         <ProductItemCard data={item} />
                       </Fade>
