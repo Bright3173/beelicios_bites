@@ -48,8 +48,8 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
       Categories.find(
         (cat) =>
           cat.groupname === category &&
-          cat.categoryName.includes(product.category)
-      )
+          cat.categoryName.includes(product.category),
+      ),
     );
   };
 
@@ -91,7 +91,7 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
                               {tab}
                             </a>
                           </Tab>
-                        )
+                        ),
                       )}
                     </ul>
                   </TabList>
@@ -117,7 +117,7 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
                         triggerOnce
                         direction="up"
                         duration={1000}
-                        className="col-6 col-lg-3 bb-product-box"
+                        className="col-6 col-lg-3 m-3 bb-product-box"
                       >
                         <ProductItemCard data={item} />
                       </Fade>
@@ -145,7 +145,7 @@ const NewArrivals = ({ onSuccess = () => {}, onError = () => {} }) => {
                           >
                             <ProductItemCard data={product} />
                           </Fade>
-                        )
+                        ),
                       )}
                     </Row>
                   </TabPanel>
